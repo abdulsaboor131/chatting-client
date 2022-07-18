@@ -1,0 +1,42 @@
+@import "../../styles/mixins";
+
+.alert-container {
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 0px;
+    overflow: hidden;
+
+    transition: all .4s ease-in-out;
+    box-shadow: 1px -1px 10px rgb(214, 214, 214);
+
+    .wrapper {
+        width: 300px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: white;
+        box-shadow: 5px 5px black;
+
+
+    }
+}
+
+.display {
+    width: 300px;
+}
+
+.success {
+    border-bottom: 2px solid green;
+}
+
+.danger {
+    border-bottom: 2px solid rgb(255, 255, 0);
+}
+
+.fail {
+    border-bottom: 2px solid red;
+}

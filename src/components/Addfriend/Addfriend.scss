@@ -1,0 +1,47 @@
+@import "../../styles/mixins";
+
+.addfriend-container {
+    display: none;
+    width: 100%;
+
+    .addfriend-wrapper {
+        padding: 10px;
+
+        .header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom: 1px solid grey;
+            margin-bottom: 10px;
+
+            .search-box {
+                height: 100%;
+                width: 100%;
+                padding: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                input {
+                    width: 90%;
+                    height: 90%;
+                    border: none;
+                    font-size: 18px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .icon {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+.display {
+    display: block;
+}

@@ -1,0 +1,34 @@
+@import "../../styles/mixins";
+
+
+.topbar-container{
+    height: 50px;
+    background-color: $primary-color;
+    .wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 15px;
+        .left{
+            display: flex;
+            align-items: center;
+            .logo{
+                font-size:22px ;
+                font-weight: 700;
+                color: $secondary-color;
+                text-transform: capitalize;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            img{
+                @include avatar
+            }
+            .icon{
+                color:$secondary-color
+            }
+        }
+    }
+}

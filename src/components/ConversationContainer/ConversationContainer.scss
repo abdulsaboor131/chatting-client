@@ -1,0 +1,81 @@
+@import "../../styles/mixins";
+
+.conv-wrapper {
+    padding: 10px;
+    height: 100%;
+
+    .header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $primary-color;
+        border-bottom: 1px solid rgb(164, 164, 164);
+        margin-bottom: 5px;
+
+        .add-icon {
+            background-color: $primary-color;
+            color: white;
+            padding: 5px;
+            font-size: 34px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($primary-color, 5%);
+            }
+        }
+
+        .heading {
+            font-weight: 700;
+            font-size: 20px;
+
+        }
+
+    }
+
+
+    .body {
+        height: calc(100% - 50px);
+        display: flex;
+        flex-direction: column;
+
+        .search-div {
+            width: 90%;
+            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.8px solid lighten($primary-color, 10%);
+            margin: 8px 0px;
+            border-radius: 12px;
+            padding: 3px 6px;
+
+            input {
+                width: 85%;
+                border: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .search-icon {
+                color: $primary-color;
+            }
+        }
+
+
+
+        .conversation-container {
+            padding: 8px;
+            overflow-y: scroll;
+
+        }
+    }
+}
+
+.hide {
+    @media only screen and (max-width:680px) {
+        display: none;
+    }
+}

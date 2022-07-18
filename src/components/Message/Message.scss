@@ -1,0 +1,29 @@
+@import "../../styles/mixins";
+.message-div{
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    img{
+        @include avatar;
+    }
+    .message{
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+}
+
+.start{
+    justify-content: flex-start;
+    
+}
+.end{
+    // justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+.grey{
+    background-color: rgba(237, 237, 237, 0.682);
+}
+.blue{
+    background-color: rgb(100, 100, 234);
+    color: white;
+}

@@ -1,0 +1,39 @@
+@import "./responsive";
+
+$primary-color: rgba(232, 60, 60, 0.825);
+$secondary-color: aliceblue;
+
+.loader {
+    color: $primary-color  !important;
+
+}
+
+@mixin btn-primary {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid $primary-color;
+    font-weight: 500;
+    background-color: white;
+    color: $primary-color;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+@mixin avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid;
+
+    @include medium {
+        height: 30px;
+        width: 30px;
+    }
+}

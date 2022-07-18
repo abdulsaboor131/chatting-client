@@ -1,0 +1,112 @@
+@import "../../styles/mixins";
+
+.chat-container {
+    flex: 2.5;
+    height: 100%;
+    display: none;
+
+    @media only screen and (min-width:680px) {
+        display: block;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .header {
+            height: 50px;
+            background-color: rgb(208, 203, 203);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0px 10px;
+
+            .icon {
+                display: none;
+
+                @include small {
+                    display: block;
+                }
+            }
+
+            span {
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            img {
+                @include avatar;
+            }
+        }
+
+        .message-area {
+            height: 75%;
+            overflow-y: scroll;
+            padding: 10px 20px;
+            border-bottom: 1px solid grey;
+        }
+
+        .text-area {
+            min-height: 15%;
+            max-height: 30%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 9px;
+
+            .input-div {
+                width: 100%;
+                max-height: 95%;
+                word-break: break-all; //very important thing
+                background-color: transparent;
+                padding: 5px 10px;
+                overflow-y: scroll;
+                cursor: pointer;
+
+                &:empty::before {
+                    content: attr(placeholder);
+                    opacity: 0.5;
+                    font-style: italic;
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .icon {
+                background-color: $primary-color;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                padding: 5px;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:hover {
+                    // $new = 
+                    background-color: darken($primary-color, 4%);
+                }
+            }
+        }
+    }
+}
+
+.mobile-only {
+    display: none;
+
+    @media only screen and (max-width:680px) {
+        display: block;
+    }
+}
+
+.no-display {
+    @media only screen and (max-width:680px) {
+        display: none;
+    }
+}
